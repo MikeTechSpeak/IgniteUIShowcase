@@ -6,6 +6,8 @@ import { IgxGridComponent } from 'igniteui-angular/grid/grid.component';
   selector: 'app-people',
   templateUrl: './person.component.html'
 })
+
+
 export class PersonComponent implements OnInit, AfterViewInit {
   title = 'People';
   public rowsCount = 100;
@@ -81,7 +83,6 @@ export class PersonComponent implements OnInit, AfterViewInit {
          Country: 'USA',
          Language: language[this.randomInt(0, 11)],
          Sports: sport[this.randomInt(0, 7)]
-
         }
       );
     }

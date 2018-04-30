@@ -7,6 +7,9 @@ import { TradesBolotterComponent } from './tradesblotter/tradesblotter.component
 import { PersonComponent } from './people/person.component';
 import { AdaptTableBlotterComponent } from './adapttableblotter/adapttableblotter.component';
 import { SharePlaceComponent } from './shareplace/shareplace.component';
+import { FinChartComponent } from './financialChart/financialChart.component';
+import { CategoryChartComponent } from './category-chart/category-chart.component';
+import { FeatureRichGridComponent } from './feature-rich-igxGrid/feature-rich-igxGrid.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,7 +19,11 @@ export const routes: Routes = [
     { path: 'banking', component: BankingComponent, data: { text: 'Banking Accounts', icon: 'monetization_on' } },
     { path: 'trade', component: TradesBolotterComponent, data: { text: 'Trade Blotter', icon: 'insert_chart' } },
     { path: 'sharePlace', component: SharePlaceComponent, data: { text: 'Share Place', icon: 'share' } },
+    { path: 'financialChart', component: FinChartComponent, data: { text: 'FinancialChart', icon: 'insert_chart' } },
+    { path: 'categoryChart', component: CategoryChartComponent, data: { text: 'CategoryChart', icon: 'insert_chart' } },
+    { path: 'FeaturedGrid', component: FeatureRichGridComponent, data: { text: 'FeatureRichGrid', icon: 'share' } },
     { path: 'about', component: AboutComponent, data: { text: 'About', icon: 'info' } }
+
 
 ];
 @NgModule({

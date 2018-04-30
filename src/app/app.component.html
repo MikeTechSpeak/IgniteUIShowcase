@@ -3,6 +3,7 @@
     #nav
     id="project-menu"
     isOpen="false"
+
     [enableGestures]='true'
     width="280px">
     <!-- we can set  pinThreshold="false" pinThreshold="3000px" -->
@@ -20,9 +21,23 @@
       </span>
     </ng-template>
   </igx-nav-drawer>
+
   <div igxFlex>
-    <igx-navbar title="IgniteUI for Angular Grid Sampler" actionButtonIcon="menu" (onAction)="nav.toggle()" igxFlex></igx-navbar>
+    <igx-navbar title="IgniteUI for Angular Grid Sampler" actionButtonIcon="menu" (onAction)="nav.toggle()" igxFlex>
+      <igx-icon name="settings" (click)="stg.toggle()"></igx-icon>
+    </igx-navbar>
     <div  igxLayout igxLayoutJustify="center"></div>
     <router-outlet></router-outlet>
   </div>
+
+    <igx-nav-drawer
+    #stg
+  id="settings-menu"
+  isOpen="false"
+  position="right"
+  width="280px">
+  <ng-template igxDrawer>
+    <span igxDrawerItem [isHeader]="true">Settings</span>
+  </ng-template>
+</igx-nav-drawer>
 </div>

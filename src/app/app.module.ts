@@ -2,11 +2,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpErrorResponse } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { FormsModule } from '@angular/forms';
-
+import { IgxFinancialChartModule } from '@infragistics/igniteui-angular-charts/ES5/igx-financial-chart-module';
+import { IgxCategoryChartModule } from '@infragistics/igniteui-angular-charts/ES5/igx-category-chart-module';
 // Ignite UI for Angular Imports
 import {
     IgxNavigationDrawerModule,
@@ -16,7 +17,14 @@ import {
     IgxGridModule,
     IgxIconModule,
     IgxSliderModule,
-    IgxButtonModule
+    IgxButtonModule,
+    IgxAvatarModule,
+    IgxBadgeModule,
+    IgxInputGroupModule,
+    IgxProgressBarModule,
+    IgxSwitchModule,
+    IgxToggleModule,
+    IgxCheckboxModule,
 } from 'igniteui-angular/main';
 
 
@@ -29,6 +37,7 @@ import { TradesBolotterComponent } from './tradesblotter/tradesblotter.component
 import { TradesBlotterService } from './tradesblotter/tradesblotter.service';
 import { InMemoryMockDataService } from './shared/inmemory.data.service';
 import { PersonComponent } from './people/person.component';
+import { FinChartComponent } from './financialChart/financialChart.component';
 import { VisaStockrService } from './visastock/visastock.service';
 import { BankingService } from './banking/banking.service';
 import { AdaptTableService } from './adapttableblotter/adapttableblotter.service';
@@ -44,6 +53,10 @@ import { SharePlaceService } from './shareplace/shareplace.service';
 import { SharePlaceComponent } from './shareplace/shareplace.component';
 import { PriceBlotterFxComponent } from './adapttableblotter/priceblotterfx.component';
 import { TradeBlotterCDSComponent } from './adapttableblotter/tradeblottercds.component';
+import { CategoryChartComponent } from './category-chart/category-chart.component';
+import { FeatureRichGridComponent } from './feature-rich-igxGrid/feature-rich-igxGrid.component';
+import { FinDataService } from './shared/finData.service';
+import { HttpModule } from '@angular/http';
 
 
 
@@ -52,6 +65,7 @@ import { TradeBlotterCDSComponent } from './adapttableblotter/tradeblottercds.co
         AppComponent,
         AboutComponent,
         PersonComponent,
+        FinChartComponent,
         AdaptTableBlotterComponent,
         PriceBlotterComponent,
         TradeBlotterBondComponent,
@@ -65,7 +79,9 @@ import { TradeBlotterCDSComponent } from './adapttableblotter/tradeblottercds.co
         TradesBolotterComponent,
         SharePlaceComponent,
         PriceBlotterFxComponent,
-        TradeBlotterCDSComponent
+        TradeBlotterCDSComponent,
+        CategoryChartComponent,
+        FeatureRichGridComponent
     ],
     imports: [
         BrowserModule,
@@ -74,18 +90,29 @@ import { TradeBlotterCDSComponent } from './adapttableblotter/tradeblottercds.co
         AppRoutingModule,
         IgxNavigationDrawerModule,
         IgxNavbarModule,
+        IgxFinancialChartModule,
+        IgxCategoryChartModule,
         IgxLayoutModule,
         IgxRippleModule,
         IgxIconModule,
         IgxButtonModule,
         IgxSliderModule,
         IgxGridModule.forRoot(),
+        IgxAvatarModule,
+        IgxBadgeModule,
+        IgxInputGroupModule,
+        IgxProgressBarModule,
+        IgxRippleModule,
+        IgxSwitchModule,
+        IgxCheckboxModule,
+        IgxToggleModule,
         HttpClientModule,
+        HttpModule,
         HttpClientInMemoryWebApiModule.forRoot(
             InMemoryMockDataService, { dataEncapsulation: false, passThruUnknownUrl: true }
         )
     ],
-    providers: [TradesBlotterService, VisaStockrService, BankingService, AdaptTableService, SharePlaceService],
+    providers: [TradesBlotterService, VisaStockrService, BankingService, AdaptTableService, SharePlaceService, FinDataService],
     bootstrap: [AppComponent],
     entryComponents: [TradeBlotterBondComponent,
         PriceBlotterCDSIndexComponent,

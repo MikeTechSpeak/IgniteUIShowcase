@@ -42,4 +42,7 @@ export class AppComponent implements OnInit {
           }
       });
   }
+  public Beer() {
+    alert('Beer');
+  }
 }
