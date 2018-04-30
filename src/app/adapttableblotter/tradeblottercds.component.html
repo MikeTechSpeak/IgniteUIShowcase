@@ -1,0 +1,31 @@
+<h2 class="view-title">
+    <span>{{title}}</span>
+    <small class="view-title__samll">Rows : {{rows}} Columns :{{columns}}</small>
+  </h2>
+  
+  <div class="contacts-theme">
+    <igx-grid #grid1 id="grid1" [data]="tradeblottercdsentitities" [height]="'600px'" [autoGenerate]="false">
+      <igx-column width="190px" field="TradeId" header="Trade Id" dataType="number"></igx-column>
+      <igx-column width="220px" field="TradeDate" header="Trade Date" dataType="string"></igx-column>
+      <igx-column width="190px" field="BuySell" header="Buy Sell" dataType="string"></igx-column>
+      <igx-column width="190px" field="Notional" header="Notional" dataType="number"></igx-column>
+      <igx-column width="190px" field="Coupon" header="Coupon" dataType="number"></igx-column>
+      <igx-column width="190px" field="Currency" header="Currency" dataType="string"></igx-column>
+      <igx-column width="350px" field="ReferenceEntity" header="Reference Entity" dataType="string"></igx-column>
+      <igx-column width="190px" field="Ticker" header="Ticker" dataType="string"></igx-column>
+      <igx-column width="350px" field="ShortName" header="Short Name" dataType="string"></igx-column>
+      <igx-column width="280px" field="Counterparty" header="Counterparty" dataType="string"></igx-column>
+      <igx-column width="190px" field="MaturityDate" header="Maturity Date" dataType="string"></igx-column>
+      <igx-column width="190px" field="EffectiveDate" header="Effective Date" dataType="string"></igx-column>
+      <igx-column width="190px" field="Tenor" header="Tenor" dataType="number"></igx-column>
+      <igx-column width="190px" field="RedEntityCode" header="Red Entity Code" dataType="string"></igx-column>
+      <igx-column width="190px" field="EntityCusip" header="Entity Cusip" dataType="string"></igx-column>
+      <igx-column width="190px" field="EntityType" header="Entity Type" dataType="string"></igx-column>
+      <igx-column width="190px" field="Jurisdiction" header="Jurisdiction" dataType="string"></igx-column>
+      <igx-column width="190px" field="Sector" header="Sector" dataType="string"></igx-column>
+      <igx-column width="190px" field="Trader" header="Trader" dataType="string"></igx-column>
+      <igx-column width="190px" field="Status" header="Status" dataType="string"></igx-column>
+    </igx-grid>
+  </div>
+  
+  

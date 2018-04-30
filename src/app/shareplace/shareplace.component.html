@@ -1,0 +1,33 @@
+<div class="wrapper">
+  <h2 class="view-title">{{title}}</h2>
+
+  <div class="banking-theme">
+    <igx-grid [data]="documents" height="675" (onSelection)="onCellSelected($event)">
+      <igx-column width="40" field="Selected" header=" " dataType="boolType">
+        <ng-template igxCell let-val>
+          <igx-icon class="selection-indicator" *ngIf="val" name="check_circle" color="blue"></igx-icon>
+        </ng-template>
+      </igx-column>
+      <igx-column width="300" field="Name" dataType="string" style="cursor:grab"></igx-column>
+      <igx-column width="120" field="Activity" dataType="string">
+        <ng-template igxCell let-cell="cell">
+          <igx-icon [name]="iconDictionary[cell.value]"></igx-icon>
+          <span>
+            {{cell.value}}
+          </span>
+        </ng-template>
+      </igx-column>
+      <igx-column field="Modified" header="Modified" dataType="Date">
+        <!--<ng-template igxCell let-val>{{val.getMonth() + 1}}-{{val.getDate()}}-{{ val.getFullYear() }}</ng-template>-->
+      </igx-column>
+      <igx-column field="ModifiedBy" header="Modified By" dataType="employee">
+        <ng-template igxCell let-val>
+          <igx-icon [name]="iconDictionary[val.Status]" [color]="statusColorDictionary[val.Status]"></igx-icon>
+          <span>
+            {{val.Name}}
+          </span>
+        </ng-template>
+      </igx-column>
+    </igx-grid>
+  </div>
+</div>

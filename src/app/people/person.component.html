@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <div class="people-config">
+    <label igxLabel for="slider">Number of Rows : {{rowsCount}}</label>
+    <igx-slider  id="slider" [minValue]="100" [maxValue]="100000" [step]="100" [(ngModel)]="rowsCount"></igx-slider>
+  </div>
+  <button igxButton="raised" igxRipple="white" (click)='rebindgrid()'>Rebind the grid</button>
+
+  <h2 class="view-title">{{title}} </h2>
+  <div class="people-theme">
+    <igx-grid  #grid1 [autoGenerate]="false" [height]="'600px'" (onColumnInit)='initcolumn($event)'>
+      <igx-column width="75px" field="Id" header="Id" dataType="number"></igx-column>
+      <igx-column  width="200px" field="Name" header="Name" filterable="true" sortable="true" dataType="string"></igx-column>
+      <igx-column width="75px" field="Age" header="Age" filterable="true" sortable="true" dataType="number"></igx-column>
+      <igx-column width="100px" field="BirthDay" header="Birthday" dataType="string"></igx-column>
+      <igx-column width="200px" field="Street" header="Street" dataType="string"></igx-column>
+      <igx-column width="200px" field="City" header="City" dataType="string"></igx-column>
+      <igx-column width="125px" field="Phone" header="Phone" dataType="string"></igx-column>
+      <igx-column width="200px" field="Country" header="Country"  dataType="string"></igx-column>
+      <igx-column width="150px" field="Language" header="Language" filterable="true" sortable="true" dataType="string"></igx-column>
+      <igx-column width="150px" field="Sports" header="Sports" filterable="true" sortable="true" dataType="string"></igx-column>
+
+    </igx-grid>
+  </div>
+</div>

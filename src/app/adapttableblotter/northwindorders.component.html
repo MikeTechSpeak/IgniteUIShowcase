@@ -1,0 +1,27 @@
+<h2 class="view-title">
+  <span>{{title}}</span>
+  <small class="view-title__samll">Rows : {{rows}} Columns :{{columns}}</small>
+</h2>
+
+<div class="northwindorders-theme">
+  <igx-grid #grid1 id="grid1" [data]="northwindordersentities" [height]="'600px'" [autoGenerate]="false">
+    <igx-column width="90px" field="OrderId" header="Order Id" dataType="string"></igx-column>
+    <igx-column width="190px" field="CustomerReference" header="Customer Reference" dataType="string"></igx-column>
+    <igx-column width="200px" field="CompanyName" header="Company Name" dataType="string"></igx-column>
+    <igx-column width="180px" field="Employee" header="Employee" dataType="string"></igx-column>
+    <igx-column width="200px" field="ItemCount" header="Item Count" dataType="number"></igx-column>
+    <igx-column width="180px" field="OrderCost" header="Order Cost" dataType="number"></igx-column>
+    <igx-column width="180px" field="OrderDate" header="Order Date" dataType="string"></igx-column>
+    <igx-column width="180px" field="RequiredDate" header="Required Date" dataType="string"></igx-column>
+    <igx-column width="180px" field="ShippedDate" header="Shipped Date" dataType="string"></igx-column>
+    <igx-column width="180px" field="ShipVia" header="Ship Via" dataType="string"></igx-column>
+    <igx-column width="180px" field="Freight" header="Freight" dataType="number"></igx-column>
+    <igx-column width="180px" field="ShipName" header="Ship Name" dataType="string"></igx-column>
+    <igx-column width="180px" field="ShipAddress" header="Ship Address" dataType="string"></igx-column>
+    <igx-column width="180px" field="ShipCity" header="Ship City" dataType="string"></igx-column>
+    <igx-column width="180px" field="ShipRegion" header="Ship Region" dataType="string"></igx-column>
+    <igx-column width="150px" field="ShipPostalCode" header="Ship Postal Code" dataType="number"></igx-column>
+    <igx-column width="150px" field="ShipCountry" header="Ship Country" dataType="string"></igx-column>
+  </igx-grid>
+</div>
+

@@ -1,0 +1,24 @@
+<h2 class="view-title">
+  <span>{{title}}</span>
+  <small class="view-title__samll">Rows : {{rows}} Columns :{{columns}}</small>
+</h2>
+
+<div class="contacts-theme">
+  <igx-grid #grid1 id="grid1" [data]="contactentities" [height]="'600px'" [autoGenerate]="false">
+    <igx-column width="90px" field="Id" header="Id" dataType="string"></igx-column>
+    <igx-column width="220px" field="FirstName" header="First Name" dataType="string"></igx-column>
+    <igx-column width="220px" field="LastName" header="Last Name" dataType="string"></igx-column>
+    <igx-column width="250px" field="Company" header="Company" dataType="string"></igx-column>
+    <igx-column width="250px" field="Address" header="Address" dataType="string"></igx-column>
+    <igx-column width="150px" field="City" header="City" dataType="string"></igx-column>
+    <igx-column width="150px" field="County" header="County" dataType="string"></igx-column>
+    <igx-column width="150px" field="State" header="State" dataType="string"></igx-column>
+    <igx-column width="120px" field="Postcode" header="Postcode" dataType="number"></igx-column>
+    <igx-column width="150px" field="Country" header="Country" dataType="string"></igx-column>
+    <igx-column width="120px" field="Phone1" header="Phone1" dataType="string"></igx-column>
+    <igx-column width="120px" field="Phone2" header="Phone2" dataType="string"></igx-column>
+    <igx-column width="220px" field="Email" header="Email" dataType="string"></igx-column>
+    <igx-column width="300px" field="Web" header="Web" dataType="string"></igx-column>
+  </igx-grid>
+</div>
+

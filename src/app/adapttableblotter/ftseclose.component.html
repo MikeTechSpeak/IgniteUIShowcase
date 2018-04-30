@@ -1,0 +1,19 @@
+<h2 class="view-title">
+  <span>{{title}}</span>
+  <small class="view-title__samll">Rows : {{rows}} Columns :{{columns}}</small>
+</h2>
+
+<div class="ftseclose-theme">
+  <igx-grid #grid1 id="grid1" [data]="ftsecloseentities" [height]="'600px'" [autoGenerate]="false">
+      <igx-column field="CloseDate" header="Close Date" dataType="string"></igx-column>
+      <igx-column width="130px" field="Open" header="Open" dataType="number"></igx-column>
+      <igx-column field="High" header="High" dataType="number"></igx-column>
+      <igx-column width="130px" field="Low" header="Low" dataType="number"></igx-column>
+      <igx-column width="130px" field="Close" header="Close" dataType="number"></igx-column>
+      <igx-column field="HighLowDifference" header="High Low Difference" dataType="number"></igx-column>
+      <igx-column width="130px" field="DaySpread" header="Day Spread" dataType="number"></igx-column>
+      <igx-column width="90px" field="Volume" header="Volume" dataType="number"></igx-column>
+      <igx-column width="150px" field="AdjustedClose" header="AdjustedClose" dataType="number"></igx-column>
+      <igx-column width="90px" field="PercentChange" header="Percent Change" dataType="number"></igx-column>
+  </igx-grid>
+</div>

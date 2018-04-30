@@ -1,0 +1,53 @@
+<div class="wrapper wrapper--dark">
+  <h2 class="view-title">{{title}}</h2>
+
+  <div class="visastock-theme">
+    <igx-grid  height="684px" [data]="visaStockEntities">
+      <igx-column field="VDate" header="Date" dataType="string"></igx-column>
+      <igx-column width="95px" field="Open" header="Open" dataType="number"></igx-column>
+      <igx-column width="95px" field="High" header="High" dataType="number">
+        <ng-template igxCell let-cell="cell" >
+          <div class="color-column color-column--high">
+            {{cell.value}}
+          </div>
+        </ng-template>
+      </igx-column>
+      <igx-column width="95px" field="Low" header="Low" dataType="number"></igx-column>
+      <igx-column width="95px" field="Close" header="Close" dataType="number"></igx-column>
+      <igx-column field="Volume" header="Volume" dataType="string"></igx-column>
+      <igx-column width="58px" field="Dividend" header="Dividend" dataType="number"></igx-column>
+      <igx-column width="30px" field="Split" header="Split" dataType="number"></igx-column>
+      <igx-column width="60px" field="" header="-" dataType="string">
+        <ng-template igxCell let-cell="cell">
+          <div class="center-value">
+            <button class="igx-button--icon" igxRipple igxRipple="white" igxRippleCentered="true">
+              <igx-icon fontSet="material" name="keyboard_arrow_left"></igx-icon>
+            </button>
+          </div>
+        </ng-template>
+      </igx-column>
+      <igx-column width="50px" field="Ask" header="Ask" dataType="number"></igx-column>
+      <igx-column width="50px" field="Bid" header="Bid" dataType="number"></igx-column>
+      <igx-column width="60px" field="" header="+" dataType="string">
+        <ng-template igxCell let-cell="cell">
+          <div class="center-value">
+            <button class="igx-button--icon" igxRipple igxRipple="white" igxRippleCentered="true">
+              <igx-icon fontSet="material" name="keyboard_arrow_right"></igx-icon>
+            </button>
+          </div>
+        </ng-template>
+      </igx-column>
+      <igx-column width="120px" field="AdjOpen" header="Adj_Open" dataType="number"></igx-column>
+      <igx-column width="120px" field="AdjHigh" header="Adj_High" dataType="number"></igx-column>
+      <igx-column width="120px" field="AdjLow" header="Adj_Low" dataType="number"></igx-column>
+      <igx-column width="100px" field="AdjClose" header="Adj_Close" dataType="number"></igx-column>
+      <igx-column width="100px" field="AdjVolume" header="Adj_Volume" dataType="number">
+        <ng-template igxCell let-cell="cell" >
+          <div class="color-column color-column--volume">
+            {{cell.value}}
+          </div>
+        </ng-template>
+      </igx-column>
+    </igx-grid>
+  </div>
+</div>

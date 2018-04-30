@@ -1,0 +1,31 @@
+<div class="wrapper">
+  <h2 class="view-title">{{title}}</h2>
+
+  <div class="banking-theme">
+    <igx-grid [data]="bankingaccounts"  height="675" [paging]="true" [perPage]="10" >
+            <igx-column width="300" field="AccountName" header="Account name" dataType="string"></igx-column>
+            <igx-column width="120" field="Currency" header="Currency" dataType="string"></igx-column>
+            <igx-column field="Availability" header="Availability" dataType="number"></igx-column>
+            <igx-column field="StartingAmount" header="Starting Amount" dataType="number"></igx-column>
+            <igx-column field="NumberTitle" header="Number Title" dataType="number"></igx-column>
+            <igx-column width="200" field="" header="Actions" dataType="string">
+                <ng-template igxCell let-cell="cell">
+                    <div class="cell__inner_2">
+                        <button class="igx-button--icon" igxRipple igxRipple="white" igxRippleCentered="true" [disabled]="true">
+                           <igx-icon fontSet="material" name="notifications"></igx-icon>
+                        </button>
+                        <button class="igx-button--icon" igxRipple igxRipple="white" igxRippleCentered="true">
+                          <igx-icon fontSet="material" name="format_list_bulleted"></igx-icon>
+                        </button>
+                        <button class="igx-button--icon" igxRipple igxRipple="white" igxRippleCentered="true">
+                          <igx-icon fontSet="material" name="refresh"></igx-icon>
+                        </button>
+                        <button class="igx-button--icon" igxRipple igxRipple="white" igxRippleCentered="true">
+                          <igx-icon fontSet="material" name="email"></igx-icon>
+                        </button>
+                    </div>
+                </ng-template>
+            </igx-column>
+    </igx-grid>
+  </div>
+</div>

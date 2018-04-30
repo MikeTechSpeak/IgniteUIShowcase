@@ -1,0 +1,10 @@
+igx-grid-row {
+  cursor: grab;
+}
+
+.igx-grid__td {
+  cursor: grab;
+}
+
+.selection-indicator {
+}

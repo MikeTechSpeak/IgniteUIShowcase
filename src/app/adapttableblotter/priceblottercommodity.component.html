@@ -1,0 +1,25 @@
+<h2 class="view-title">
+  <span>{{title}}</span>
+  <small class="view-title__samll">Rows : {{rows}} Columns :{{columns}}</small>
+</h2>
+
+<div class="priceblottercommodity-theme">
+  <igx-grid #grid1 id="grid1" [data]="priceblottercommodityentities" [height]="'600px'" [autoGenerate]="false">
+      <igx-column width="190px" field="CommodityType" header="Commodity Type" dataType="string"></igx-column>
+      <igx-column width="190px" field="Symbol" header="Symbol" dataType="string"></igx-column>
+      <igx-column width="200px" field="BidOfferSpread" header="Bid Offer Spread" dataType="string"></igx-column>
+      <igx-column width="90px" field="OpenPrice" header="Open Price" dataType="string"></igx-column>
+      <igx-column width="200px" field="Price" header="Price" dataType="string"></igx-column>
+      <igx-column width="190px" field="Bid" header="Bid" dataType="string"></igx-column>
+      <igx-column width="190px" field="Ask" header="Ask" dataType="string"></igx-column>
+      <igx-column width="190px" field="Change" header="Change" dataType="number"></igx-column>
+      <igx-column width="190px" field="PercentChange" header="Percent Change" dataType="number"></igx-column>
+      <igx-column width="190px" field="Volume" header="Volume" dataType="number"></igx-column>
+      <igx-column width="190px" field="DayHigh" header="Day High" dataType="string"></igx-column>
+      <igx-column width="190px" field="DayLow" header="Day Low" dataType="string"></igx-column>
+      <igx-column width="190px" field="YearHigh" header="Year High" dataType="string"></igx-column>
+      <igx-column width="190px" field="YearLow" header="Year Low" dataType="string"></igx-column>
+      <igx-column width="90px" field="YearStart" header="Year Start" dataType="string"></igx-column>
+      <igx-column width="90px" field="PercentChangeOnYear" header="Percent Change On Year" dataType="number"></igx-column>
+  </igx-grid>
+</div>

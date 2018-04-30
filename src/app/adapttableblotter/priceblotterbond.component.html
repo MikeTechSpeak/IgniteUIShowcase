@@ -1,0 +1,32 @@
+<h2 class="view-title">
+  <span>{{title}}</span>
+  <small class="view-title__samll">Rows : {{rows}} Columns :{{columns}}</small>
+</h2>
+
+<div class="priceblotterbond-theme">
+  <igx-grid #grid1 id="grid1" [data]="priceblotterentities" [height]="'600px'" [autoGenerate]="false">
+      <igx-column width="200px" field="Isin" header="Isin" dataType="string"></igx-column>
+      <igx-column width="200px" field="Instrument" header="Instrument" dataType="string"></igx-column>
+      <igx-column width="200px" field="Sector" header="Sector" dataType="string"></igx-column>
+      <igx-column width="200px" field="Price" header="Price" dataType="number"></igx-column>
+      <igx-column width="200px" field="BidOfferSpread" header="Bid Offer Spread" dataType="number"></igx-column>
+      <igx-column width="200px" field="Bid" header="Bid" dataType="number"></igx-column>
+      <igx-column width="200px" field="Ask" header="Ask" dataType="number"></igx-column>
+      <igx-column width="200px" field="IssueTracker" header="Issue Tracker" dataType="string"></igx-column>
+      <igx-column width="200px" field="Coupon" header="Coupon" dataType="number"></igx-column>
+      <igx-column width="200px" field="Currency" header="Currency" dataType="string"></igx-column>
+      <igx-column width="200px" field="Tier" header="Tier" dataType="string"></igx-column>
+      <igx-column width="200px" field="Depth" header="Depth" dataType="number"></igx-column>
+      <igx-column width="200px" field="Spread" header="Spread" dataType="number"></igx-column>
+      <igx-column width="200px" field="Rating" header="Rating" dataType="string"></igx-column>
+      <igx-column width="200px" field="Country" header="Country" dataType="string"></igx-column>
+      <igx-column width="200px" field="Cusip" header="Cusip" dataType="string"></igx-column>
+  </igx-grid>
+</div>
+<!--
+Not working  -->
+<!-- <igx-grid #igxGrid1 [data]="priceblotterentities"  [height]="'600px'" [autoGenerate]="false">
+    <igx-column *ngFor="let c of columns" [sortable]="true" [filterable]="true" [movable]="true"
+    [field]="c.key" [header]="c.headerText" [width]="c.width" [dataType]="c.dataType">
+    </igx-column>
+</igx-grid> -->

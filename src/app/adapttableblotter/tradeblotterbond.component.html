@@ -1,0 +1,28 @@
+<h2 class="view-title">
+  <span>{{title}}</span>
+  <small class="view-title__samll">Rows : {{rows}} Columns :{{columns}}</small>
+</h2>
+
+<div class="tradeblotterbond-theme">
+  <igx-grid #grid1 id="grid1" [data]="tradeblotterbondentities" [height]="'600px'" [autoGenerate]="false">
+    <igx-column width="190px" field="TradeId" header="Trade Id" dataType="number"></igx-column>
+    <igx-column width="190px" field="TradeDate" header="Trade Date" dataType="string"></igx-column>
+    <igx-column width="200px" field="BuySell" header="Buy Sell" dataType="string"></igx-column>
+    <igx-column width="190px" field="Notional" header="Notional" dataType="number"></igx-column>
+    <igx-column width="200px" field="Currency" header="Currency" dataType="string"></igx-column>
+    <igx-column width="190px" field="TradedAt" header="Traded At" dataType="string"></igx-column>
+    <igx-column width="190px" field="Isin" header="Isin" dataType="string"></igx-column>
+    <igx-column width="250px" field="ObligationName" header="Obligation Name" dataType="string"></igx-column>
+    <igx-column width="250px" field="Counterparty" header="Counterparty" dataType="string"></igx-column>
+    <igx-column width="190px" field="MaturityDate" header="Maturity Date" dataType="string"></igx-column>
+    <igx-column width="190px" field="EffectiveDate" header="Effective Date" dataType="string"></igx-column>
+    <igx-column width="190px" field="Jurisdiction" header="Jurisdiction" dataType="string"></igx-column>
+    <igx-column width="190px" field="Ticker" header="Ticker" dataType="string"></igx-column>
+    <igx-column width="190px" field="Coupon" header="Coupon" dataType="number"></igx-column>
+    <igx-column width="190px" field="Cusip" header="Cusip" dataType="string"></igx-column>
+    <igx-column width="190px" field="Trader" header="Trader" dataType="string"></igx-column>
+    <igx-column width="190px" field="Status" header="Status" dataType="string"></igx-column>
+  </igx-grid>
+</div>
+
+

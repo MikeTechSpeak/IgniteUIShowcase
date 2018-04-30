@@ -1,0 +1,25 @@
+<h2 class="view-title">
+    <span>{{title}}</span>
+    <small class="view-title__samll">Rows : {{rows}} Columns :{{columns}}</small>
+  </h2>
+  
+  <div class="tradeblotterbond-theme">
+    <igx-grid #grid1 id="grid1" [data]="priceblotterfxentities" [height]="'600px'" [autoGenerate]="false">
+      <igx-column width="190px" field="Type" header="Trade Id" dataType="number"></igx-column>
+      <igx-column width="190px" field="CurrencyPair" header="Currency Pair" dataType="string"></igx-column>
+      <igx-column width="200px" field="Price" header="Price" dataType="number"></igx-column>
+      <igx-column width="190px" field="Change" header="Change" dataType="number"></igx-column>
+      <igx-column width="200px" field="BidOfferSpread" header="Bid Offer Spread" dataType="number"></igx-column>
+      <igx-column width="190px" field="Bid" header="Bid" dataType="number"></igx-column>
+      <igx-column width="190px" field="Ask" header="Ask" dataType="number"></igx-column>
+      <igx-column width="190px" field="Close" header="Close" dataType="number"></igx-column>
+      <igx-column width="190px" field="DayLow" header="Day Low" dataType="number"></igx-column>
+      <igx-column width="190px" field="DayHigh" header="Day High" dataType="number"></igx-column>
+      <igx-column width="190px" field="YearLow" header="Year Low" dataType="number"></igx-column>
+      <igx-column width="190px" field="YearHigh" header="Year High" dataType="number"></igx-column>
+      
+    </igx-grid>
+  </div>
+  
+  
+  

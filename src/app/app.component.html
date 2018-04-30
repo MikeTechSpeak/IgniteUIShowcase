@@ -1,0 +1,28 @@
+<div class="main" igxLayout>
+  <igx-nav-drawer
+    #nav
+    id="project-menu"
+    isOpen="false"
+    [enableGestures]='true'
+    width="280px">
+    <!-- we can set  pinThreshold="false" pinThreshold="3000px" -->
+    <ng-template igxDrawer>
+      <!-- <header igxDrawerItem
+      isHeader="true">Applications</header> -->
+      <!-- <span igxDrawerItem [isHeader]="true">Views</span> -->
+      <span *ngFor="let route of topNavLinks"
+            igxDrawerItem
+            igxRipple
+            routerLinkActive="igx-nav-drawer__item--active"
+            routerLink="{{route.path}}">
+         <igx-icon fontSet="material" name="{{route.icon}}"></igx-icon>
+         {{route.name}}
+      </span>
+    </ng-template>
+  </igx-nav-drawer>
+  <div igxFlex>
+    <igx-navbar title="IgniteUI for Angular Grid Sampler" actionButtonIcon="menu" (onAction)="nav.toggle()" igxFlex></igx-navbar>
+    <div  igxLayout igxLayoutJustify="center"></div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

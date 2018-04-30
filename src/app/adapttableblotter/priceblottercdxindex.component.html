@@ -1,0 +1,25 @@
+<h2 class="view-title">
+  <span>{{title}}</span>
+  <small class="view-title__samll">Rows : {{rows}} Columns :{{columns}}</small>
+</h2>
+
+<div class="priceblottercdxindex-theme">
+  <igx-grid #grid1 id="grid1" [data]="priceblottercdsindexenties" [height]="'600px'" [autoGenerate]="false">
+      <igx-column width="90px" field="IndexName" header="Index Name" dataType="string"></igx-column>
+      <igx-column width="190px" field="Series" header="Series" dataType="number"></igx-column>
+      <igx-column width="190px" field="Spread3Y" header="Spread3 Y" dataType="number"></igx-column>
+      <igx-column width="190px" field="Spread5Y" header="Spread5 Y" dataType="number"></igx-column>
+      <igx-column width="190px" field="Spread7Y" header="Spread7 Y" dataType="number"></igx-column>
+      <igx-column width="190px" field="Spread10Y" header="Spread10 Y" dataType="number"></igx-column>
+      <igx-column width="190px" field="Markit3Y" header="Markit3 Y" dataType="number"></igx-column>
+      <igx-column width="190px" field="Markit5Y" header="Markit5 Y" dataType="number"></igx-column>
+      <igx-column width="190px" field="Markit7Y" header="Markit7 Y" dataType="number"></igx-column>
+      <igx-column width="190px" field="Markit10Y" header="Markit10 Y" dataType="number"></igx-column>
+      <igx-column width="190px" field="Maturity3Y" header="Maturity3 Y" dataType="number"></igx-column>
+      <igx-column width="190px" field="Maturity5Y" header="Maturity5 Y" dataType="number"></igx-column>
+      <igx-column width="190px" field="Maturity7Y" header="Maturity7 Y" dataType="number"></igx-column>
+      <igx-column width="190px" field="Maturity10Y" header="Maturity10 Y" dataType="number"></igx-column>
+      <igx-column width="190px" field="RedCode" header="Red Code" dataType="string"></igx-column>
+      <igx-column width="190px" field="OnTheRun" header="On The Run" dataType="string"></igx-column>
+  </igx-grid>
+</div>

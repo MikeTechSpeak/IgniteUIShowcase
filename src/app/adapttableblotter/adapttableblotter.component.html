@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <!-- <select [(ngModel)]="selectedDataSource" name="d" (change)="changeDs($event.target.value)">
+      <option *ngFor="let d of AdapttableBlotterDataSoureOptions" [ngValue]="d">{{d.Title}}</option>
+  </select> -->
+
+  <div class="native-dd">
+    <select class="native-dd__select" [(ngModel)]="selectedDataSource" (change)='changeDs()'>
+      <option *ngFor="let d of AdapttableBlotterDataSoureOptions" [ngValue]="d">{{d.Title}}</option>
+    </select>
+    <igx-icon fontSet="material" name="keyboard_arrow_down"></igx-icon>
+  </div>
+  <!-- <button (click)='changeDataSource()'>Regenerate Ignite UI Grid</button> -->
+
+  <template #gridcontainer></template>
+</div>

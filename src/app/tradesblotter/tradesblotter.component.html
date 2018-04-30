@@ -1,0 +1,33 @@
+<div class="wrapper">
+  <h2 class="view-title">{{title}}</h2>
+
+  <div class="trade-theme">
+    <igx-grid  [data]="tradesblotters"  height="675" [paging]="true" [perPage]="10">
+      <igx-column width="90px" field="DeskId" header="Desk ID" dataType="number"></igx-column>
+      <igx-column width="90px" field="TradeId" header="Trade ID" dataType="number"></igx-column>
+      <igx-column width="110px" field="InstrumentId" header="Instrument ID" dataType="string"></igx-column>
+      <igx-column width="200px" field="Title" header="String Title" dataType="string"></igx-column>
+      <igx-column field="Notionals" header="Notional($)" dataType="string"></igx-column>
+      <igx-column field="Counterparty" header="Counterparty" dataType="string"></igx-column>
+      <igx-column width="90px"  field="Currency" header="Currency" dataType="string"></igx-column>
+      <igx-column field="Country" header="Country" dataType="string">
+        <ng-template igxCell let-cell="cell">
+          <div class="cell__inner_2 cell__flags">
+            <img width="16px" [src]="cell.row.rowData.Flag" class="flag" />
+            <span>
+            {{cell.value}}
+          </span>
+          </div>
+        </ng-template>
+      </igx-column>
+      <igx-column field="ChangeOnYear" header="Change on Year" dataType="string"></igx-column>
+      <igx-column field="Price" header="Price" dataType="string"></igx-column>
+      <igx-column width="120px" field="MoodysRa" header="Moodys Ra.." dataType="string"></igx-column>
+    </igx-grid>
+    <ng-template #pager let-grid>
+      Current page: {{grid.page}}
+      <input type="number" [ngModel]="grid.page" (onModelChange)="grid.paginate($event)" />
+      Total pages: {{ grid.totalPages }}
+    </ng-template>
+  </div>
+</div>
